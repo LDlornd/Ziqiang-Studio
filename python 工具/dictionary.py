@@ -41,23 +41,27 @@ def dictionaryReverse():
 def inputERROR():
     print("请确保您的输入为 0 或 1")
 
-while True:
-    os.system("cls")
-    print("欢迎使用 python 字典反转系统，请选择您要进行的操作：")
-    print("1: 反转字典")
-    print("0: 退出")
-    try:
-        option = input()
-    except:
-        inputERROR()
-    else:
-        if option == "0":
-            break
-        elif option != "1":
+def main():
+    while True:
+        os.system("cls")
+        print("欢迎使用 python 字典反转系统，请选择您要进行的操作：")
+        print("1: 反转字典")
+        print("0: 退出")
+        try:
+            option = input()
+        except:
             inputERROR()
         else:
-            dictionaryReverse()
-    os.system("pause")
+            if option == "0":
+                break
+            elif option != "1":
+                inputERROR()
+            else:
+                dictionaryReverse()
+        os.system("pause")
+
+if __name__ == "__main__":
+    main()
 
 '''
 {

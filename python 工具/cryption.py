@@ -25,23 +25,27 @@ def Decode():
 def inputError():
     print("您输入了错误的数据，请确保您输入了 0 ~ 2 之间的整数！")
 
-while True:
-    os.system("cls")
-    print("欢迎使用 python base64 加解密系统，请选择你想要进行的操作：")
-    print("1：加密")
-    print("2：解密")
-    print("0：退出")
-    try:
-        option = input()
-    except:
-        inputError()
-    else:
-        if option == "1":
-            Encode()
-        elif option == "2":
-            Decode()
-        elif option == "0":
-            break
-        else:
+def main():
+    while True:
+        os.system("cls")
+        print("欢迎使用 python base64 加解密系统，请选择你想要进行的操作：")
+        print("1：加密")
+        print("2：解密")
+        print("0：退出")
+        try:
+            option = input()
+        except:
             inputError()
-    os.system("pause")
+        else:
+            if option == "1":
+                Encode()
+            elif option == "2":
+                Decode()
+            elif option == "0":
+                break
+            else:
+                inputError()
+        os.system("pause")
+
+if __name__ == "__main__":
+    main()
